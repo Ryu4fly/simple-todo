@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :tasks
+  has_many :tasks, dependent: :destroy
 
   validates :username, uniqueness: true, presence: true, length: { in: 5..20 }
   validates :email, uniqueness: true, presence: true, email: true
