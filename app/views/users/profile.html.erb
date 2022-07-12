@@ -1,5 +1,7 @@
 <h1>Profile Settings</h1>
 
+<%= render @user %>
 
 
+<%= link_to 'Edit Profile', edit_user_path(@user) %>
 <%= link_to 'Back', user_path(@user) %>
