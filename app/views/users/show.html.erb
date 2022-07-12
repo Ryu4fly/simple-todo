@@ -1,10 +1,11 @@
 <p style="color: green"><%= notice %></p>
-
-<%= render @user %>
-
+<h1><%= @greeting %></h1>
 <div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
-
-  <%= button_to "Destroy this user", @user, method: :delete %>
+  <%= link_to 'Add Task' %>
+  <% if @user.role == 'Admin' %>
+    <%= link_to 'Admin' %>
+  <% end %>
+  <%= link_to 'Profile', user_profile_path(@user.id) %>
+  <%= link_to 'Completed'  %>
+  <%= button_to 'Logout', logout_path, method: :delete %>
 </div>
