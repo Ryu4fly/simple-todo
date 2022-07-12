@@ -73,3 +73,4 @@ end
 
 #3rd party
 gem 'argon2'
+gem 'faker'
